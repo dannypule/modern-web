@@ -8,7 +8,7 @@ const environment = process.env.NODE_ENV; // NODE_ENV
 const port = process.env.port || 3344; // create port 
 
 if (environment === 'development') { // check if dev environment
-    const config = require('./webpack.dev.config'); // require webpack dev config
+    const config = require('./config/webpack.dev.config'); // require webpack dev config
     const compiler = webpack(config); // create compile
 
     app.use(webpackDevMiddleware(compiler, { // use webpackDevMiddleware
