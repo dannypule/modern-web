@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "baseUrl": "./app",
+        "sourceMap": false,
+        "moduleResolution": "node"
+    },
+    "file": [
+        "./app/index.ts"
+    ]
+}
