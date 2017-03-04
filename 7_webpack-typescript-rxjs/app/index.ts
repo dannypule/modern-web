@@ -1,4 +1,5 @@
 import { ten } from './module';
+import * as Rx from 'rxjs/Rx';
 
 class Animal {
     private _weight: number;
@@ -34,3 +35,14 @@ let weight = dog.weight;
 document.write(`
     Weight is ${weight}. <br/>
 `);
+
+let thing: any = document.getElementById('thing');
+let mousemove = Rx.Observable.fromEvent(document.body, 'mousemove');
+mousemove.subscribe((e: any)=>{
+    let el = document.createElement('span');
+    el.classList.add('thing');
+    el.style.top = e.y + 'px';
+    el.style.left = e.x + 'px';
+    console.log(e.y);
+    document.body.appendChild(el);
+});
