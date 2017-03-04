@@ -8,7 +8,6 @@ let draw: any = (x: number, y: number):void => {
         el.style.left = x + 'px';
         document.body.appendChild(el);
 };
-let thing: any = document.getElementById('dot');
 let mousemove = Rx.Observable.fromEvent(document.body, 'mousemove');
 let mousedown = Rx.Observable.fromEvent(document.body, 'mousedown');
 let mouseup = Rx.Observable.fromEvent(document.body, 'mouseup');
