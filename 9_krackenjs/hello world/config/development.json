@@ -1,8 +1,5 @@
 {
-    
-
     "middleware": {
-
         "devtools": {
             "enabled": true,
             "priority": 35,
@@ -12,13 +9,10 @@
                     "path:./public",
                     "path:./.build",
                     {
-                        
-                        
                         "css": {
                             "module": "construx-sass",
                             "files": "/css/**/*.css"
                         },
-                        
                         "copier": {
                             "module": "construx-copier",
                             "files": "**/*"

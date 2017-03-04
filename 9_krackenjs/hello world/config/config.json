@@ -1,34 +1,25 @@
 {
-
-    
-
-    
-
-    
     "i18n": {
         "contentPath": "path:./locales",
         "fallback": "en-US"
     },
-    
-
-    "specialization": {
-    },
-
+    "specialization": {},
     "middleware": {
-
-        
-
         "static": {
             "module": {
-                "arguments": [ "path:./.build" ]
+                "arguments": [
+                    "path:./.build"
+                ]
             }
         },
-
         "router": {
             "module": {
-                "arguments": [{ "directory": "path:./controllers" }]
+                "arguments": [
+                    {
+                        "directory": "path:./controllers"
+                    }
+                ]
             }
         }
-
     }
 }
