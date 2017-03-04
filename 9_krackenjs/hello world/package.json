@@ -1,0 +1,33 @@
+{
+  "name": "hello-world",
+  "version": "0.1.0",
+  "description": "a demo app",
+  "author": "danny pule",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test",
+    "build": "grunt build",
+    "all": "npm run build && npm run test",
+    "postinstall": "grunt postinstall"
+  },
+  "dependencies": {
+    "construx": "^1.0.0",
+    "construx-copier": "^1.0.0",
+    "construx-sass": "^1.0.0",
+    "eslint": "^1.10.3",
+    "express": "^4.12.2",
+    "kraken-js": "^2.0.0",
+    "requirejs": "^2.3.3"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.0",
+    "supertest": "^0.9.0"
+  },
+  "browserPackage": {
+    "overrides": {
+      "requirejs": {
+        "main": "require"
+      }
+    }
+  }
+}

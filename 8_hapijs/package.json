@@ -1,0 +1,19 @@
+{
+  "name": "8_hapijs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "good": "^7.1.0",
+    "good-console": "^6.4.0",
+    "good-squeeze": "^5.0.1",
+    "hapi": "^16.1.0",
+    "inert": "^4.1.0"
+  }
+}

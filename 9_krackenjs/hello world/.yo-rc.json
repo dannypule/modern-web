@@ -1,0 +1,14 @@
+{
+  "generator-kraken": {
+    "taskModule": "grunt",
+    "lintModule": "eslint",
+    "description": "a demo app",
+    "author": "danny pule",
+    "templateModule": false,
+    "i18n": "i18n",
+    "componentPackager": false,
+    "cssModule": "sass",
+    "jsModule": "requirejs",
+    "useJson": null
+  }
+}
