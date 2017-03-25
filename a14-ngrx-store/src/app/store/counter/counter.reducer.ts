@@ -14,6 +14,8 @@ export function counterReducer(
             return setCounterCurrentValue(counter, counter.currentValue - 1);
         case CounterActions.RESET:
             return setCounterCurrentValue(counter, 0);
+        default: 
+            return counter; // always return the current state by default!!
     }
 }
 

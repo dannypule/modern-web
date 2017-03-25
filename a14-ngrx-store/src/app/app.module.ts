@@ -8,19 +8,17 @@ import { EffectsModule } from "@ngrx/effects";
 import 'rxjs/Rx';
 
 import { AppComponent } from './app.component';
-import {CounterComponent} from './components';
+import { CounterComponent } from './components';
 
 import { rootReducer } from './store/rootReducer';
 import { CounterActions } from './store/counter/counter.actions';
 import { CounterEffects } from './store/counter/counter.effects';
+
 import { CounterService } from './services';
 
 const appRoutes: Routes = [
   { path: '', component: CounterComponent },
 ];
-
-
-// console.log(rootReducer);
 
 @NgModule({
   declarations: [
