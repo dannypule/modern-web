@@ -1,0 +1,6 @@
+<counter
+    [counter]="counter$ | async" 
+    (onIncrement)="actions.increment()"
+    (onDeccrement)="actions.decrement()" 
+    (onReset)="actions.reset()"
+></counter>
