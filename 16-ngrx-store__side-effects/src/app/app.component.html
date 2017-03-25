@@ -4,3 +4,12 @@
     (onDeccrement)="actions.decrement()" 
     (onReset)="actions.reset()"
 ></counter>
+
+
+<br><br><br>
+
+<search
+    [result]="searchQuery.searchResult.result"
+    (onPerformSearch)="searchActions.performSearch($event)"
+>
+</search>

@@ -1,0 +1,7 @@
+<div>
+    <input type="text" [(ngModel)]="query" placeholder="UK Postcode Search">
+    <br>
+    <button (click)="onPerformSearch.emit(query)">Search for postcode!</button>
+    <br>
+    <pre [innerHtml]="result | prettyjson:2"></pre>
+</div>
