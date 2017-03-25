@@ -1,10 +1,10 @@
 <div>
     <!-- what the hec is an aync pipe??? -->
-    Clicked: {{currentValue$ | async}} times
+    Clicked: {{counter.currentValue}} times
 
     <!--Clicked: {{currentValue}} times-->
     <br>
-    <button (click)="actions.increment()">+</button>
-    <button (click)="actions.decrement()">-</button>
-    <button (click)="actions.reset()">reset</button> 
+    <button (click)="onIncrement.emit()">+</button>
+    <button (click)="onDeccrement.emit()">-</button>
+    <button (click)="onReset.emit()">reset</button> 
 </div>

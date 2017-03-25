@@ -2,10 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule, Routes } from '@angular/router';
 import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
 import 'rxjs/Rx';
+
+import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { CounterComponent } from './components';
@@ -15,10 +16,6 @@ import { CounterActions } from './store/counter/counter.actions';
 import { CounterEffects } from './store/counter/counter.effects';
 
 import { CounterService } from './services';
-
-const appRoutes: Routes = [
-  { path: '', component: CounterComponent },
-];
 
 @NgModule({
   declarations: [
@@ -30,7 +27,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     EffectsModule,
-    RouterModule.forRoot(appRoutes),
+    // routing, // disable routing for this demo
     StoreModule.provideStore(rootReducer)
   ],
   providers: [
