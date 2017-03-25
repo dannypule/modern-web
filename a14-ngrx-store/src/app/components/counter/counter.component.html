@@ -1,6 +1,8 @@
 <div>
-    <!--Clicked: {{currentValue$ | async}} times--> <!-- what the hec is an aync pipe??? -->
-    Clicked: {{currentValue}} times
+    <!-- what the hec is an aync pipe??? -->
+    Clicked: {{currentValue$ | async}} times
+
+    <!--Clicked: {{currentValue}} times-->
     <br>
     <button (click)="actions.increment()">+</button>
     <button (click)="actions.decrement()">-</button>

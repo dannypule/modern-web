@@ -20,23 +20,22 @@ export class CounterComponent implements OnInit {
     public actions: CounterActions,
     private _store: Store<AppState>
   ) {
-    this.currentValue$ = this.counterService.getCurrentValue(); // get initial value with an Observable magic way
 
-    // get initial value in a more explicit way but not the best because it subscribes to whole state
-    _store.subscribe(state => {
-      // this.currentValue = state.counter.currentValue; 
-    });
+    ///////////////////////////////////////////////////////////////////
+    // Below are FOUR ways of doing pretty much the same thing
+    //================================================================
 
-    // get initial value by selecting 'counter' from the current state
-    _store.select('counter').subscribe((counter: Counter) => {
-      // this.currentValue = counter.currentValue; 
-    });
+    ///// 1 - get initial value with an Observable magic way
+    this.currentValue$ = this.counterService.getCurrentValue();
 
-    // get initial value by selecting 'counter' from the current state
-    _store.select('counter', 'currentValue').subscribe((currentValue: number) => {
-      console.log(currentValue);
-      this.currentValue = currentValue; 
-    });
+    ///// 2 - get initial value in a more explicit way but not the best because it subscribes to whole state
+    // this.counterService.selectAppState().subscribe(appState => this.currentValue = appState.counter.currentValue);
+
+    ///// 3 - get initial value by selecting 'counter' from the current state
+    // this.counterService.selectCounter().subscribe(counter => this.currentValue = counter.currentValue);
+
+    ///// 4 - get initial value by selecting 'counter' from the current state
+    this.counterService.selectCurrentValue().subscribe(currentValue => this.currentValue = currentValue);
   }
 
   ngOnInit() {
