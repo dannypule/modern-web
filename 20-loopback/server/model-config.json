@@ -14,7 +14,7 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "test-mongodb"
   },
   "AccessToken": {
     "dataSource": "db",
@@ -36,10 +36,14 @@
     "public": false
   },
   "Employee": {
-    "dataSource": "db",
+    "dataSource": "test-mongodb",
     "public": true
   },
   "Asset": {
+    "dataSource": "test-mongodb",
+    "public": true
+  },
+  "Demo": {
     "dataSource": "db",
     "public": true
   }

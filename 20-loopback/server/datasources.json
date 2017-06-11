@@ -2,5 +2,25 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "mondodb-via-mlab": {
+    "host": "ds019076",
+    "port": 19076,
+    "url": "mongodb://admin:awsforthewin@ds019076.mlab.com:19076/asset-management-loopback",
+    "database": "asset-management-loopback",
+    "password": "awsforthewin",
+    "name": "mondodb-via-mlab",
+    "user": "admin",
+    "connector": "mongodb"
+  },
+  "test-mongodb": {
+    "host": "",
+    "port": 0,
+    "url": "mongodb://admin:awsforthewin@ds019076.mlab.com:19076/asset-management-loopback",
+    "database": "",
+    "password": "",
+    "name": "test-mongodb",
+    "user": "",
+    "connector": "mongodb"
   }
 }
