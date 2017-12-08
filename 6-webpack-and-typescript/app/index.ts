@@ -22,6 +22,13 @@ sum = verifiedNums.reduce((total: number, num: number) => {
     return total + num;
 }, 0)
 
-document.write(`
-    ${sum}
-`);
+if (sum !== 1141) { // simple test
+    document.write(`
+        sum should equal 1141
+    `);
+    throw new Error('sum should equal 1141')
+} else {
+    document.write(`
+        ${sum}
+    `);
+}
