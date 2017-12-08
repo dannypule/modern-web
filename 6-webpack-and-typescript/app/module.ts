@@ -1,1 +1,0 @@
-export const ten: number = 100;

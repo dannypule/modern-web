@@ -1,36 +1,27 @@
-import { ten } from './module';
+import digitsString from './digits'
 
-class Animal {
-    private _weight: number;
+let sum = 0;
+let verifiedNums: number[] = [];
 
-    constructor(
-        private name: string,
-        private owner: string
-    ) {
+for (let i = 0; i < digitsString.length; i++) {
+    const val = parseInt(digitsString.charAt(i));
+    let nextVal: number;
 
+    if (i === digitsString.length - 1) { // check if last item
+        nextVal = parseInt(digitsString.charAt(0));
+    } else {
+        nextVal = parseInt(digitsString.charAt(i + 1));
     }
 
-    getInfo() {
-        document.write(`
-            ${this.name} belongs to ${this.owner}. <br/> 
-        `);
-    }
-
-    get weight(): number {
-        return this._weight;
-    }
-
-    set weight(weight: number) {
-        this._weight = weight;
+    if (val === nextVal) {
+        verifiedNums.push(val)
     }
 }
 
-let dog = new Animal('Pogo', 'Jim');
-dog.getInfo();
-
-dog.weight = ten;
-let weight = dog.weight;
+sum = verifiedNums.reduce((total: number, num: number) => {
+    return total + num;
+}, 0)
 
 document.write(`
-    Weight is ${weight}. <br/>
+    ${sum}
 `);

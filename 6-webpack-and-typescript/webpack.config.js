@@ -10,13 +10,13 @@ module.exports = {
                 enforce: 'pre',
                 test: /\.js$/,
                 loader: "source-map-loader",
-                exclude: 'node_modules'
+                exclude: path.resolve(__dirname, 'node_modules')
             },
             {
                 enforce: 'pre',
                 test: /\.ts$/,
                 loader: 'ts-loader',
-                exclude: 'node_modules'
+                exclude: path.resolve(__dirname, 'node_modules')
             }
         ]
     },
