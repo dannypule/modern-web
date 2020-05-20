@@ -6,4 +6,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-o
 install docker compose
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
 
+sudo apt update
+sudo apt install nodejs
+sude apt install npm
+
 change cert.dannypule.com to custom domain
