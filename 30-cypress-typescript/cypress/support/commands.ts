@@ -32,7 +32,6 @@ declare global {
   namespace Cypress {
     interface Chainable {
       login: typeof login;
-      dataMock: typeof dataMock;
     }
   }
 }
@@ -44,11 +43,6 @@ function login(email = "user@site.com", pw = "LongPass123$") {
   cy.get('button[type="submit"]').click();
 }
 
-function dataMock() {
-  cy.intercept("GET", "api/123", { fixture: "general/123.json" });
-}
-
 Cypress.Commands.add("login", login);
-Cypress.Commands.add("dataMock", dataMock);
 
 export {};
