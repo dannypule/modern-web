@@ -1,3 +1,4 @@
 # What is this?
 
-Tiny "hello worlds" projects for various libraries & frameworks.
+
+Small "hello worlds" projects for various libraries & frameworks.
