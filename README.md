@@ -1,1 +1,3 @@
-'hello worlds' for various libraries
+# What is this?
+
+Tiny "hello worlds" projects for various libraries & frameworks.
